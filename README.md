@@ -19,3 +19,16 @@ mvnw spring-boot:run -Dspring-boot.run.arguments="arg1,arg2"
 together
 
 mvnw spring-boot:run -Dspring-boot.run.arguments="--enable,arg1,arg2"
+
+# to change the spring profiles ("dev" in current scenario)
+
+mvnw spring-boot:run -Dspring.profiles.active=dev
+
+
+# to change the properties file name
+
+mvnw spring-boot:run -Dspring.config.name=mycfg
+
+# to change path of properties file
+
+mvnw clean spring-boot:run -Dspring.config.location=classpath:META-INF/conf/
